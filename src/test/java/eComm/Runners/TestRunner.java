@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
         (
-		features = "src/test/resources/eComm/Featurefiles",
+		features = "classpath:eComm/Featurefiles",
 		glue = {"eComm.Stepdefinitions", "eComm.Hooks"},
 		dryRun = false,									
 		monochrome = true,
