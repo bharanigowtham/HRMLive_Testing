@@ -9,7 +9,7 @@ import io.cucumber.testng.CucumberOptions;
 		glue = {"eComm.Stepdefinitions", "eComm.Hooks"},
 		dryRun = false,									
 		monochrome = true,
-		tags = "@Loginpagetest,@TS006_TC001",
+		tags = "@TS006_TC001",
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }
 		)
 
