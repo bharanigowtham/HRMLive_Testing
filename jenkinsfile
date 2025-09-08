@@ -2,25 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout Repos') {
+        stage('Checkout Automation Repo') {
             steps {
-                // Checkout Repo A
-                git branch: 'master',
-                    url: 'https://github.com/bharanigowtham/HRMLive_Development.git'
-
-                // Checkout Repo B (automation)
-                dir('testing repo') {
-                    git branch: 'master',
-                        url: 'https://github.com/bharanigowtham/HRMLive_Testing.git'
-                }
+                checkout scm   // pulls Repo B (automation)
             }
         }
 
         stage('Run Automation') {
             steps {
-                dir('testing repo') {
-                    sh "mvn clean test"
-                }
+                sh "mvn clean test"
             }
         }
     }
