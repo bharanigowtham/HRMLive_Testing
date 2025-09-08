@@ -1,22 +1,31 @@
 pipeline {
-	
-	agent any
-	
-	triggers {
-		githubPush()
-	} 
-	
-	stages {
-		stage ('Checkout') {
-				steps {
-					checkout scm
-				}
-		}
-		
-		stage ('Run Tests') {
-			steps {
-				sh 'mvn clean test'
-			}
-		}
-	}
+    agent any
+
+    triggers {
+        githubPush()
+    }
+
+    stages {
+        stage('Checkout Repos') {
+            steps {
+                // Checkout Repo A
+                git branch: 'master',
+                    url: 'https://github.com/bharanigowtham/HRMLive_Development.git'
+
+                // Checkout Repo B (automation)
+                dir('testing repo') {
+                    git branch: 'master',
+                        url: 'https://github.com/bharanigowtham/HRMLive_Testing.git'
+                }
+            }
+        }
+
+        stage('Run Automation') {
+            steps {
+                dir('testing repo') {
+                    sh "mvn clean test"
+                }
+            }
+        }
+    }
 }
