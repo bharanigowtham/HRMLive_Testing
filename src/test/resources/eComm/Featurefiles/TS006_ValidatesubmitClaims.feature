@@ -1,4 +1,4 @@
-@Regression @TS006
+@Regression @TS006 @Smoke
 Feature: Submit new claim
 
 Background: As an admin I have to login into the system

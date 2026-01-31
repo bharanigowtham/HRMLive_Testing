@@ -1,4 +1,4 @@
-@Recruitmentpagetest @Regression @TS004
+@Recruitmentpagetest @Smoke @TS004
 
 Feature: Validate new vacancies addition to recruitment
 

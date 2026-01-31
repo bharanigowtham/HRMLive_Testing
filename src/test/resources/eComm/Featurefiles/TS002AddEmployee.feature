@@ -1,4 +1,4 @@
-@Smoke @homepagetest @TS002
+@homepagetest @TS002
 Feature: Adding new employee to the system
 
 Background: As an admin I have to login into the system

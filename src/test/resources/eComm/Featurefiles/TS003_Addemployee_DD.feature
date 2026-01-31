@@ -1,4 +1,4 @@
-@Smoke @homepagetest1 @Regression @TS003
+@Sanity @homepagetest1 @Regression @TS003
 Feature: Adding new employee to the system
 
 Background: As an admin I have to login into the system
