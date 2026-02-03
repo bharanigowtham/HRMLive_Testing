@@ -41,10 +41,11 @@ public class AppHooks {
 	
 	@Before(order=2)
 	public void launchbrowser() {
-		String browservalue = prop.getProperty("browser");
+		String browser = System.getProperty("browser", prop.getProperty("browser"));		
 		String driverautodownloadsts = prop.getProperty("driverautodownload");
+		
 		driverfactory = new DriverFactory();
-		driver = driverfactory.init_driver(browservalue, driverautodownloadsts);
+		driver = driverfactory.init_driver(browser, driverautodownloadsts);
 		
 	}
 

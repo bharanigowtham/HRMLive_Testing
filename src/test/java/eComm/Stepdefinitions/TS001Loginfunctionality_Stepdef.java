@@ -32,8 +32,33 @@ public class TS001Loginfunctionality_Stepdef {
 	@Given("I launch url & have to login to system with valid credentials")
 	public void i_launch_url_have_to_login_to_system_with_valid_credentials(DataTable datatable) throws Exception {
 		prop = config.init_properties();
-		String AppUrl = prop.getProperty("url");
+		String AppUrl = null;
+		String env = System.getProperty("env", prop.getProperty("env"));
+		if(env.equalsIgnoreCase("env"))
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else if(env.equalsIgnoreCase("qa")) 
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else if(env.equalsIgnoreCase("uat"))
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else if(env.equalsIgnoreCase("sit"))
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else 
+		{
+			System.out.println("Provide correct environment name...");
+		}
+		
+		System.out.println("Environment : " + env);
+		
 		DriverFactory.getdriver().get(AppUrl);
+		
 		List<Map<String,String>> creds = datatable.asMaps();
 		String uname = creds.get(0).get("Username");
 		String pswd = creds.get(0).get("Password");
@@ -47,7 +72,29 @@ public class TS001Loginfunctionality_Stepdef {
 	@Given("User is on login page")
 	public void user_is_on_login_page() throws Exception {
 		prop = config.init_properties();
-		String AppUrl = prop.getProperty("url");
+		String AppUrl = null;
+		String env = System.getProperty("env", prop.getProperty("env"));
+		if(env.equalsIgnoreCase("env"))
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else if(env.equalsIgnoreCase("qa")) 
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else if(env.equalsIgnoreCase("uat"))
+		{
+			AppUrl = prop.getProperty("url");
+		}
+		else if(env.equalsIgnoreCase("sit"))
+		{
+			AppUrl = prop.getProperty("url");
+		}else {
+			System.out.println("Provide correct environment name...");
+		}
+		
+		System.out.println("Environment : " + env);	
+		
 		DriverFactory.getdriver().get(AppUrl);
 	}
 
