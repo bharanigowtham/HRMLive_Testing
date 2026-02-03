@@ -1,4 +1,4 @@
-@TS007
+@TS007 @Sanity
 Feature: Take screenshot on pages
 
 Background: As an admin I have to login into the system
