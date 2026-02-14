@@ -1,7 +1,7 @@
-title: "Automation Test Report"
-subtitle: "Ecomm AdminSite Tests"
-author: "QA Team"
-showDashboard: true
-showCharts: true
-showTable: true
-theme: "light"
+# Minimal valid config for Grasshopper PDF plugin
+summaryConfig: {}
+featureConfig: {}
+scenarioConfig: {}
+detailedFeatureConfig: {}
+detailedScenarioConfig: {}
+detailedStepHookConfig: {}
