@@ -1,8 +1,7 @@
-report:
-  title: "Automation Test Report"
-  subtitle: "Ecomm AdminSite Tests"
-  author: "Bharani Gowtham"
-  showDashboard: true
-  showCharts: true
-  showTable: true
-  theme: "light"
+title: "Automation Test Report"
+subtitle: "Ecomm AdminSite Tests"
+author: "QA Team"
+showDashboard: true
+showCharts: true
+showTable: true
+theme: "light"
