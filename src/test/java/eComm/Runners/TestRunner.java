@@ -11,7 +11,7 @@ import io.cucumber.testng.CucumberOptions;
 		glue = {"eComm.Stepdefinitions", "eComm.Hooks"},
 		dryRun = false,									
 		monochrome = true,
-		tags = "@Smoke",
+//		tags = "@Smoke",
 		plugin = {"pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		)
 
