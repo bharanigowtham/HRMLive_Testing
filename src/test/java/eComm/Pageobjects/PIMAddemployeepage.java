@@ -1,6 +1,7 @@
 package eComm.Pageobjects;
 
 import java.io.File;
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -74,7 +75,7 @@ public class PIMAddemployeepage {
 				driver.findElement(By.xpath("(//div[@class='oxd-select-wrapper'])[1]")).click();
 				Thread.sleep(2000);
 				WebElement ele = driver.findElement(By.xpath("//div[@role='listbox']//div//span[contains(text(),'" + value + "')]"));
-				Helpers.WaitforvisibilityofElement(ele, 30);
+				Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(30));
 				ele.click();
 				Thread.sleep(500);
 			} else if (field.equalsIgnoreCase("Marital status") || field.equalsIgnoreCase("Job Category") || field.equalsIgnoreCase("Pay Frequency")
@@ -83,7 +84,7 @@ public class PIMAddemployeepage {
 				driver.findElement(By.xpath("(//div[@class='oxd-select-wrapper'])[2]")).click();
 				WebElement ele = driver
 						.findElement(By.xpath("//div[@role='listbox']//div//span[contains(text(),'" + value + "')]"));
-				Helpers.WaitforvisibilityofElement(ele, 30);
+				Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(30));
 				ele.click();
 				Thread.sleep(500);
 			} else if (field.equalsIgnoreCase("Blood type") || field.equalsIgnoreCase("Sub Unit") || field.equalsIgnoreCase("Currency")
@@ -92,7 +93,7 @@ public class PIMAddemployeepage {
 				driver.findElement(By.xpath("(//div[@class='oxd-select-wrapper'])[3]")).click();
 				WebElement ele = driver
 						.findElement(By.xpath("//div[@role='listbox']//div//span[contains(text(),'" + value + "')]"));
-				Helpers.WaitforvisibilityofElement(ele, 30);
+				Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(30));
 				ele.click();
 				Thread.sleep(500);
 			} else if (field.equalsIgnoreCase("Location") || field.equalsIgnoreCase("Account Type")) {
@@ -101,7 +102,7 @@ public class PIMAddemployeepage {
 				Thread.sleep(2000);
 				WebElement ele = driver
 						.findElement(By.xpath("//div[@role='listbox']//div//span[contains(text(),'" + value + "')]"));
-				Helpers.WaitforvisibilityofElement(ele, 30);
+				Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(30));
 				ele.click();
 				Thread.sleep(500);
 			} else if (field.equalsIgnoreCase("Employment Status")) {
@@ -110,7 +111,7 @@ public class PIMAddemployeepage {
 				Thread.sleep(2000);
 				WebElement ele = driver
 						.findElement(By.xpath("//div[@role='listbox']//div//span[contains(text(),'" + value + "')]"));
-				Helpers.WaitforvisibilityofElement(ele, 30);
+				Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(30));
 				ele.click();
 				Thread.sleep(500);
 			}
@@ -133,12 +134,12 @@ public class PIMAddemployeepage {
 			throws InterruptedException {
 		try {
 			WebElement dateDDbtn = driver.findElement(By.xpath("(//div[@class='oxd-date-wrapper'])[" + index + "]"));
-			Helpers.WaitforClickableElement(dateDDbtn, 10);
+			Helpers.WaitforClickableElement(dateDDbtn, Duration.ofSeconds(30));
 			dateDDbtn.click();
 			Thread.sleep(2000);
 			WebElement yearDDbtn = driver.findElement(
 					By.xpath("//div[@class='oxd-calendar-header']//ul/li[@class='oxd-calendar-selector-year']"));
-			Helpers.WaitforClickableElement(yearDDbtn, 10);
+			Helpers.WaitforClickableElement(yearDDbtn, Duration.ofSeconds(30));
 			yearDDbtn.click();
 			Helpers.Scrollupbyjs();
 			Thread.sleep(1000);
@@ -199,12 +200,12 @@ public class PIMAddemployeepage {
 			Thread.sleep(3000);
 			WebElement ele = driver.findElement(By.xpath("(//div[@class='oxd-radio-wrapper'])[1]"));
 //			WebElement ele = driver.findElement(By.xpath("//div[@class='oxd-radio-wrapper']//label//input[@value=1]"));
-			Helpers.WaitforClickableElement(ele, 10);
+			Helpers.WaitforClickableElement(ele, Duration.ofSeconds(30));
 			Thread.sleep(1000);
 			ele.click();
 		} else if (radioname.equalsIgnoreCase("Female") || radioname.equals("Visa")) {
 			WebElement ele = driver.findElement(By.xpath("(//div[@class='oxd-radio-wrapper'])[2]"));
-			Helpers.WaitforvisibilityofElement(ele, 10);
+			Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(10));
 			ele.click();
 			Thread.sleep(500);
 		}
@@ -317,7 +318,7 @@ public class PIMAddemployeepage {
 
 	public void clickonAddbyindex(int index) {
 		WebElement ele = driver.findElement(By.xpath("(//div[@class='orangehrm-action-header']//button[@type='button'])[" + index + "]"));
-		Helpers.WaitforClickableElement(ele, 10);
+		Helpers.WaitforClickableElement(ele, Duration.ofSeconds(30));
 		ele.click();
 		
 	}

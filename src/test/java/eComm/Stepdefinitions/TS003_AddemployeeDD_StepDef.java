@@ -1,6 +1,7 @@
 package eComm.Stepdefinitions;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -201,7 +202,7 @@ public class TS003_AddemployeeDD_StepDef {
 		PIMAddemppage.selectdatefromcalendar(dobarray[2], month, dobarray[0], 1);
 		WebElement eligibletstatus = DriverFactory.getdriver()
 				.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[4]"));
-		Helpers.WaitforvisibilityofElement(eligibletstatus, 10);
+		Helpers.WaitforvisibilityofElement(eligibletstatus, Duration.ofSeconds(30));
 		eligibletstatus.sendKeys(testdata.get(rowno).get("Eligible Status"));
 		PIMAddemppage.selectdropdownvaluebytextprovided("Issued By", testdata.get(rowno).get("Issued By"));
 	}

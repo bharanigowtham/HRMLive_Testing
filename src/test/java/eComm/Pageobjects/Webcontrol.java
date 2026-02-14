@@ -1,5 +1,6 @@
 package eComm.Pageobjects;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -24,7 +25,7 @@ public class Webcontrol {
 				driver.findElement(By.xpath("(//div[@class='oxd-select-wrapper'])["+index+"]")).click();
 				Thread.sleep(2000);
 				WebElement ele = driver.findElement(By.xpath("//div[@role='listbox']//div//span[contains(text(),'" + value + "')]"));
-				Helpers.WaitforvisibilityofElement(ele, 30);
+				Helpers.WaitforvisibilityofElement(ele, Duration.ofSeconds(10));
 				ele.click();
 				Thread.sleep(500);
 			}			
@@ -46,7 +47,7 @@ public class Webcontrol {
 			Thread.sleep(2000);
 			WebElement yearDDbtn = driver.findElement(
 					By.xpath("//div[@class='oxd-calendar-header']//ul/li[@class='oxd-calendar-selector-year']"));
-			Helpers.WaitforClickableElement(yearDDbtn, 10);
+			Helpers.WaitforClickableElement(yearDDbtn, Duration.ofSeconds(30));
 			yearDDbtn.click();
 			Helpers.Scrollupbyjs();
 			Thread.sleep(1000);

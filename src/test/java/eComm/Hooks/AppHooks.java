@@ -40,7 +40,7 @@ public class AppHooks {
 	}
 	
 	@Before(order=2)
-	public void launchbrowser() {
+	public void launchbrowser() throws Exception  {
 		String browser = System.getProperty("browser", prop.getProperty("browser"));		
 		String driverautodownloadsts = prop.getProperty("driverautodownload");
 		

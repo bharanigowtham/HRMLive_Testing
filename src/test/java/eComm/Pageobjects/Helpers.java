@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.GregorianCalendar;
 import java.util.Random;
-
+import java.time.Duration;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
@@ -84,22 +84,22 @@ public class Helpers {
 		return date;
 	}
 
-	public static void WaitforvisibilityofElement(WebElement element, int timeoutInseconds) {
+	public static void WaitforvisibilityofElement(WebElement element, Duration timeoutInseconds) {
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getdriver(), timeoutInseconds);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 
-	public static void WaitforvisibilityofElement(By element, int timeoutInseconds) {
+	public static void WaitforvisibilityofElement(By element, Duration timeoutInseconds) {
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getdriver(), timeoutInseconds);
 		wait.until(ExpectedConditions.visibilityOf((WebElement) element));
 	}
 
-	public static void WaitforClickableElement(WebElement element, int timeoutInseconds) {
+	public static void WaitforClickableElement(WebElement element, Duration timeoutInseconds) {
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getdriver(), timeoutInseconds);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
 
-	public static void WaitforClickableElement(By element, int timeoutInseconds) {
+	public static void WaitforClickableElement(By element, Duration timeoutInseconds) {
 		WebDriverWait wait = new WebDriverWait(DriverFactory.getdriver(), timeoutInseconds);
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}

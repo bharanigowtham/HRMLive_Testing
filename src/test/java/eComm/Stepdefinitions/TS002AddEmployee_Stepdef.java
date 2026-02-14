@@ -1,6 +1,7 @@
 package eComm.Stepdefinitions;
 
 import java.lang.reflect.Array;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -207,7 +208,7 @@ public class TS002AddEmployee_Stepdef {
 		String str_gen = Helpers.generateRandomString();
 		WebElement eligibletstatus = DriverFactory.getdriver()
 				.findElement(By.xpath("(//input[@class='oxd-input oxd-input--active'])[4]"));
-		Helpers.WaitforvisibilityofElement(eligibletstatus, 10);
+		Helpers.WaitforvisibilityofElement(eligibletstatus, Duration.ofSeconds(30));
 		eligibletstatus.sendKeys(str_gen);
 		PIMAddemppage.selectdropdownvaluebytextprovided("Issued By", "Maldives");
 	}
