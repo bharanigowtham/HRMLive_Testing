@@ -1,7 +1,0 @@
-# Minimal valid config for Grasshopper PDF plugin
-summaryConfig: {}
-featureConfig: {}
-scenarioConfig: {}
-detailedFeatureConfig: {}
-detailedScenarioConfig: {}
-detailedStepHookConfig: {}
